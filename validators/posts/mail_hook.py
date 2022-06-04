@@ -31,31 +31,31 @@ def is_post_mail_hook(function: Function) -> Function:
 
         if len(errors) > 0:
             request.error_data = errors
-        # else:
-        #     if len(temp_data.get('token')) < 255:
-        #         request.error_data = {
-        #             'token': 'invalid'
-        #         }
-        #     else:    
-        #         response = requests.post(
-        #             url='https://hcaptcha.com/siteverify',
-        #             data={
-        #                 'response': temp_data.get('token'),
-        #                 'sitekey': app_config.get('hcaptcha_sitekey'),
-        #                 'secret': app_config.get('hcaptcha_secret')
-        #             }
-        #         )
+        else:
+            if len(temp_data.get('token')) < 255:
+                request.error_data = {
+                    'token': 'invalid'
+                }
+            else:    
+                response = requests.post(
+                    url='https://hcaptcha.com/siteverify',
+                    data={
+                        'response': temp_data.get('token'),
+                        'sitekey': app_config.get('hcaptcha_sitekey'),
+                        'secret': app_config.get('hcaptcha_secret')
+                    }
+                )
                 
-        #         if response.status_code == 200:
-        #             response_data = response.json()
+                if response.status_code == 200:
+                    response_data = response.json()
 
-        #             if not response_data.get('success', False):
-        #                 request.error_data = {
-        #                     'token': 'invalid'
-        #                 }
+                    if not response_data.get('success', False):
+                        request.error_data = {
+                            'token': 'invalid'
+                        }
 
-        #             else:
-        #                 temp_data['token'] = response_data
+                    else:
+                        temp_data['token'] = response_data
                     
 
         request.valid_data = temp_data
