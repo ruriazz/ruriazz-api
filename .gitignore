@@ -1,8 +1,7 @@
 /venv/
-# core/__pycache__
 *.sqlite3
 *.log
 *.pot
-# *.pyc
-# __pycache__
+*.pyc
+__pycache__
 run.sh
