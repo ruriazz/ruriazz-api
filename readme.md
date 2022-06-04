@@ -3,8 +3,8 @@
 ### Webhook
 - **Forward contact to email** <br />
 Method: **POST** <br />
-Path: `/hook/email` <br />
-Data: `Content-Type`: `text/xml`
+Path: `/hook/mail` <br />
+Data: `Content-Type`: `application/xml`
 ```
 <?xml version="1.0" encoding="utf-8"?>
 <root>
