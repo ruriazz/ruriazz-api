@@ -20,7 +20,7 @@ class MailerView:
         SIB.create_contact(email=data.get('sender_email'), name=data.get('sender_name'))
         SIB.send_email(
             subject='Thank you for contacting :)',
-            html_message=f"<p>Dear {data.get('sender_name')},</p><p>Your message has been forwarded to <b>Aziz Ruri Suparman</b>!</p><br><p>From: <b>{data.get('sender_name')} &lt;{data.get('sender_email')}&gt;</b><br>Message:<br><em>{data.get('message')}</em></p><p>Thank you! :)</p>",
+            html_message=f"<p>Dear {data.get('sender_name')},</p><p>Your message has been forwarded to <b>{app_config.get('contact_name')}</b>!</p><br><p>From: <b>{data.get('sender_name')} &lt;{data.get('sender_email')}&gt;</b><br>Message:<br><em>{data.get('message')}</em></p><p>Thank you! :)</p>",
             from_email={
                 "name": app_config.get('contact_name'),
                 "email": app_config.get('email_host_user')
@@ -52,4 +52,4 @@ class MailerView:
             }
         )
 
-        return ApiResponse(data)
+        return ApiResponse(data='Email submited.')
