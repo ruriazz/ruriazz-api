@@ -41,7 +41,7 @@ class SendInBlue:
 
         send_smtp_email = sib_api_v3_sdk.SendSmtpEmail(
             to=[receipents],
-            reply_to=from_email,
+            reply_to=reply_to,
             html_content=html_message,
             sender=from_email,
             subject=subject
