@@ -5,7 +5,7 @@ from rest_framework.decorators import api_view
 from core.app_config import app_config
 from utils.api_response import ApiResponse
 from validators.posts.mail_hook import is_post_mail_hook
-from django.core.mail import send_mail
+from utils.sendinblue import SendInBlue as SIB
 
 class MailerView:
 
@@ -17,20 +17,39 @@ class MailerView:
 
         data = request.valid_data
 
-        send_mail(
-            subject='Someone contacted you',
-            message='',
-            html_message=f"<h4>From: {data.get('sender_name')} &lt;{data.get('sender_email')}&gt;</h4><b>Message:</b><p>{data.get('message')}</p>",
-            from_email=app_config.get('email_host_user'),
-            recipient_list=app_config.get('contact_receipent')
+        SIB.create_contact(email=data.get('sender_email'), name=data.get('sender_name'))
+        SIB.send_email(
+            subject='Thank you for contacting :)',
+            html_message=f"<p>Dear {data.get('sender_name')},</p><p>Your message has been forwarded to <b>Aziz Ruri Suparman</b>!</p><br><p>From: <b>{data.get('sender_name')} &lt;{data.get('sender_email')}&gt;</b><br>Message:<br><em>{data.get('message')}</em></p><p>Thank you! :)</p>",
+            from_email={
+                "name": app_config.get('contact_name'),
+                "email": app_config.get('email_host_user')
+            },
+            reply_to={
+                "name": app_config.get('contact_name'),
+                "email": app_config.get('contact_reply_to')
+            },
+            receipents={
+                "name": data.get('sender_name'),
+                "email": data.get('sender_email')
+            }
         )
 
-        send_mail(
-            subject='Thank you for contacting :)',
-            message='',
-            html_message=f"<p>Dear {data.get('sender_name')},</p><p>Your message has been forwarded to <b>Aziz Ruri Suparman</b>!</p><br><p>From: <b>{data.get('sender_name')} &lt;{data.get('sender_email')}&gt;</b><br>Message:<br><em>{data.get('message')}</em></p><br><p>Thank you! :)</p>",
-            from_email=app_config.get('email_host_user'),
-            recipient_list=[data.get('sender_email')]
+        SIB.send_email(
+            subject='Someone contacted you!',
+            html_message=f"<h4>From: {data.get('sender_name')} &lt;{data.get('sender_email')}&gt;</h4><b>Message:</b><p>{data.get('message')}</p>",
+            from_email={
+                "name": data.get('sender_name'),
+                "email": app_config.get('email_host_user')
+            },
+            reply_to={
+                "name": data.get('sender_name'),
+                "email": data.get('sender_email')
+            },
+            receipents={
+                "name": app_config.get('contact_name'),
+                "email": app_config.get('contact_receipent')
+            }
         )
 
         return ApiResponse(data)

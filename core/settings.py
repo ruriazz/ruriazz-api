@@ -141,10 +141,3 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
-
-EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
-EMAIL_HOST = app_config.get('email_host')
-EMAIL_PORT = app_config.get('email_port')
-EMAIL_USE_TLS = app_config.get('email_use_tls')
-EMAIL_HOST_USER = app_config.get('email_host_user')
-EMAIL_HOST_PASSWORD = app_config.get('email_host_password')
