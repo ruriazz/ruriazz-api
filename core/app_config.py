@@ -19,5 +19,6 @@ app_config = {
     'hcaptcha_sitekey': os.environ.get('HCAPTCHA_SITEKEY', 'YOUR_HCAPTCHA_SITEKEY'),
     'hcaptcha_secret': os.environ.get('HCAPTCHA_SECRET', 'YOUR_HCAPTCHA_SECRET'),
     'sib_api_url': os.environ.get('SIB_API_URL', 'https://api.sendinblue.com/v3'),
-    'sib_key': os.environ.get('SIB_KEY', 'YOUR_SIB_KEY')
+    'sib_key': os.environ.get('SIB_KEY', 'YOUR_SIB_KEY'),
+    'developer_auth': os.environ.get('DEVELOPER_AUTH', 'YOUR_DEVELOPER_AUTH').split(',')
 }

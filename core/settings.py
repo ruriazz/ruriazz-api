@@ -66,6 +66,9 @@ REST_FRAMEWORK = {
     'DEFAULT_RENDERER_CLASSES': [
         'rest_framework_xml.renderers.XMLRenderer',
     ],
+    'DEFAULT_AUTHENTICATION_CLASSES': (
+        'utils.decorators.authentication.BasicAuthentication',
+    ),
 }
 
 ROOT_URLCONF = 'core.urls'
