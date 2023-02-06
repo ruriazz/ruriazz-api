@@ -1,0 +1,48 @@
+{% load static %}
+<aside class="col-12 col-md-12 col-xl-3">
+    <div class="sidebar box shadow pb-0 sticky-column">
+        <svg class="avatar avatar--180" viewBox="0 0 188 188">
+            <g class="avatar__box">
+                <image xlink:href="{% static 'img/profile.jpg' %}" height="100%" width="100%" />
+            </g>
+        </svg>
+        <div class="text-center">
+            <h3 class="title title--h3 sidebar__user-name"><span class="weight--500">Aziz</span>
+                Ruri Suparman</h3>
+            <div class="badge badge--light">Backend Developer</div>
+
+            <!-- Social -->
+            <div class="social">
+                <a class="social__link" target="_blank" href="//github.com/ruriazz"><i
+                        class="font-icon icon-github"></i></a>
+                <a class="social__link" target="_blank" href="//www.instagram.com/ruriazz/"><i
+                        class="font-icon icon-instagram"></i></a>
+                <a class="social__link" target="_blank" href="//www.facebook.com/ruriazz"><i
+                        class="font-icon icon-facebook"></i></a>
+                <a class="social__link" target="_blank" href="//twitter.com/ruriazz"><i
+                        class="font-icon icon-twitter"></i></a>
+                <a class="social__link" target="_blank" href="//www.linkedin.com/in/ruriazz/"><i
+                        class="font-icon icon-linkedin2"></i></a>
+            </div>
+        </div>
+
+        <div class="sidebar__info box-inner box-inner--rounded">
+            <ul class="contacts-block">
+                <li class="contacts-block__item" data-toggle="tooltip" data-placement="top" title="Birthday">
+                    <i class="font-icon icon-calendar"></i>March, 1996
+                </li>
+                <li class="contacts-block__item" data-toggle="tooltip" data-placement="top" title="Address">
+                    <i class="font-icon icon-location"></i>Jakarta, Indonesia
+                </li>
+                <li class="contacts-block__item" data-toggle="tooltip" data-placement="top" title="E-mail">
+                    <a href="mailto:azizruri.s@hotmail.com"><i
+                            class="font-icon icon-envelope"></i>azizruri.s@hotmail.com</a>
+                </li>
+                <li class="contacts-block__item" data-toggle="tooltip" data-placement="top" title="Phone">
+                    <a href="tel:+6281314277138"><i class="font-icon icon-phone"></i>+62 813 1427
+                        7138</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</aside>
