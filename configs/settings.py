@@ -36,6 +36,10 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+
+    'rest_framework',
+    'corsheaders',
+    'drf_yasg'
 ]
 
 MIDDLEWARE = [
@@ -46,6 +50,8 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    "corsheaders.middleware.CorsMiddleware",
+    'libs.middlewares.openapi.OpenapiMiddleware'
 ]
 
 ROOT_URLCONF = 'configs.urls'
@@ -130,7 +136,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/4.1/howto/static-files/
 
 STATIC_URL = '_static/'
-STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+STATIC_ROOT = os.path.join(BASE_DIR, '/usr/share/nginx/html/_static')
 # STATICFILES_DIRS = [
 #     os.path.join(BASE_DIR, 'static')
 # ]
@@ -162,3 +168,35 @@ if os.environ.get('REDIS_LOCATION'):
     }
 
 CAPTCHA_SECRET = os.environ.get('CAPTCHA_SECRET')
+
+CORS_ALLOW_ALL_ORIGINS = DEBUG
+CORS_ALLOWED_ORIGINS = [
+    i.strip() \
+        for i in os.environ.get('DJANGO_CORS_ALLOWED_ORIGINS', 'http://localhost:3000') \
+        .split(',')
+]
+CORS_ALLOW_METHODS = [
+    i.strip() \
+        for i in os.environ.get('DJANGO_CORS_ALLOW_METHODS', 'OPTIONS,GET,POST,PUT,PATCH,DELETE') \
+        .split(',')
+]
+CORS_ALLOW_HEADERS = [
+    i.strip() \
+        for i in os.environ.get('DJANGO_CORS_ALLOW_HEADERS', 'accept,accept-encoding,content-type,origin,referer,user-agent,x-authorization') \
+        .split(',')
+]
+
+
+SWAGGER_SETTINGS = {
+   'SECURITY_DEFINITIONS': None,
+   'DEFAULT_INFO': 'configs.openapi.info',
+   'DEFAULT_AUTO_SCHEMA_CLASS': 'configs.openapi.CamelCaseOperationIDAutoSchema',
+}
+
+REDOC_SETTINGS = {
+    'LAZY_RENDERING': True,
+    'EXPAND_RESPONSES': 'all',
+    'PATH_IN_MIDDLE': True,
+    'NATIVE_SCROLLBARS': True,
+    'REQUIRED_PROPS_FIRST': True
+}

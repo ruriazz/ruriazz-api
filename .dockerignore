@@ -88,8 +88,10 @@ local_settings.py
 .env
 db.sqlite3
 
+.vscode/
 .venv
 static/__/
+.test*
 
 .git*
 .dockerignore

@@ -1,19 +1,16 @@
-from libs.bases import BaseApiHandler
-from rest_framework.request import Request
+from drf_yasg.utils import swagger_auto_schema
+from libs.extensions import BaseApiHandler
+from libs.decorators.rest_api import ApiMethod, DataValidation
 from . import usecases
 from . import serializers
 
 class ContactApiHandler(BaseApiHandler):
 
-    @staticmethod
-    @BaseApiHandler.api_view(['POST'])
-    def submit_contact(request: Request):
-        post_data = serializers.Validator.PostSubmitContact(data=request.data)
-        if not post_data.is_valid():
-            return BaseApiHandler.ApiResponse(message=post_data.errors, meta_contract='E7001')
-
-        request.data.update(post_data.validated_data)
-        usecase = usecases.ContactApiUsecase(context=request)
+    @swagger_auto_schema(method='post', auto_schema=None)
+    @ApiMethod(['POST'])
+    @DataValidation(serializers.Validator.PostSubmitContact)
+    def submit_contact(self):
+        usecase = usecases.ContactApiUsecase(context=self._context)
         if not usecase.submit_contact():
-            return BaseApiHandler.ApiResponse(message=usecase.errors, meta_contract=usecase.meta_response)
-        return BaseApiHandler.ApiResponse(request.data)
+            return self.response(message=usecase.errors, meta_contract=usecase.meta_response)
+        return self.response(self._context.data)

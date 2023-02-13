@@ -1,7 +1,7 @@
 import pytz
 from datetime import datetime
 from django.core.mail import EmailMessage
-from libs.bases import BaseApiUsecase
+from libs.extensions import BaseApiUsecase
 from configs.settings import EMAIL_HOST_USER, EMAIL_NOTIFICATION_RECEIPIENT
 
 
