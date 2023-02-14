@@ -91,5 +91,7 @@ db.sqlite3
 .venv
 static/
 .test*
+local.env
 
 swagger.json
+configs/settings/local.py

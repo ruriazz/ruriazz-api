@@ -1,7 +1,9 @@
 FROM python:3.8.16-alpine
 
 RUN apk update && apk upgrade
-RUN apk add pkgconfig git gcc gpgme-dev libc-dev
+RUN apk add pkgconfig git gcc gpgme-dev libc-dev \
+    && apk add --virtual build-deps gcc python3-dev musl-dev \
+    && apk add --no-cache mariadb-dev
 
 ENV PYTHONBUFFERED 1
 

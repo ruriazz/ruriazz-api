@@ -6,6 +6,7 @@ app_name = 'openapi'
 from .cors.handlers import CorsHandler
 from .short_url.handlers import ShortUrlHandler
 from .master_data.handlers import MasterDataHandler
+from .google_place.handlers import GooglePlaceHandler
 
 
 
@@ -26,6 +27,9 @@ urlpatterns = [
             path(r'md/idn-subdistrict', MasterDataHandler.idn_subdistrict_collections),
             path(r'md/idn-subdistrict/<slug:subdistrict_slug>/urban-village', MasterDataHandler.idn_urban_village_collection_by_subdistrict),
             path(r'md/idn-urban-village', MasterDataHandler.idn_urban_village_collections),
+
+            # Google Place
+            path(r'google-place', GooglePlaceHandler.gmap_link_info)
         ]),
     )
 ]

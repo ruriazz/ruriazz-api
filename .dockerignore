@@ -92,8 +92,12 @@ db.sqlite3
 .venv
 static/__/
 .test*
+local.env
 
 .git*
 .dockerignore
 
 container/
+
+swagger.json
+configs/settings/local.py

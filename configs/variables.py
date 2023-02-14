@@ -8,11 +8,11 @@ API_META: dict = {
 
     # Error Contracts
     'E7000': (400, 'General Error'),
-    'E7001': (400, 'Form validation error'),
-    'E7002': (401, 'Authentication error'),
-    'E7003': (401, 'No Authorization header'),
-    'E7004': (401, 'Invalid Authorization header'),
-    'E7005': (400, 'Parameter validation error'),
+    'E7001': (400, 'Parameter validation error'),
+    'E7002': (400, 'Form validation error'),
+    'E7003': (401, 'Authentication error'),
+    'E7004': (401, 'No Authorization header'),
+    'E7005': (401, 'Invalid Authorization header'),
     'E7006': (401, 'Authorization expired'),
     'E7007': (400, 'Create Data Error'),
     'E7008': (400, 'Get Data Error'),

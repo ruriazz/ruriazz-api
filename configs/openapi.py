@@ -26,6 +26,8 @@ class Summary:
 
     S3001 = 'Create Short URL'
 
+    S4001 = 'GooleMaps link'
+
 class Description:
     D1001 = 'Cross-Origin Resource Sharing (CORS) Host Registration'
     D1002 = ''
@@ -40,6 +42,8 @@ class Description:
     D2007 = 'Indonesian Urban Village Collection with Sub-district slug'
 
     D3001 = 'Generate New Short URL'
+
+    D4001 = 'Get Place info from GoogleMaps link'
 
 
 info = openapi.Info(title="ruriazz - OpenAPI", default_version='v1', description="")

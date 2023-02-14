@@ -3,11 +3,15 @@ from urllib import request
 from django.core.handlers.wsgi import WSGIRequest
 from django.http import HttpResponse, response
 from django.shortcuts import render
+from django.conf import settings
 from rest_framework.request import Request
 from rest_framework.response import Response
+from rest_framework import serializers
 from libs.response import APIResponse
-from configs.settings import BASE_DIR
 from rest_framework.generics import GenericAPIView
+from django.db import models
+
+from libs.response.pagination import APIPagination
 
 
 class BaseHandler:
@@ -35,7 +39,7 @@ class BaseHandler:
 
     @staticmethod
     def file_response(file_path: str, content_type: str) -> response.HttpResponse:
-        with open(os.path.join(BASE_DIR, file_path), 'r') as f:
+        with open(os.path.join(settings.BASE_DIR, file_path), 'r') as f:
             return HttpResponse(f.read(), content_type=content_type)
 
 class BaseApiHandler(GenericAPIView):
@@ -47,11 +51,11 @@ class BaseApiHandler(GenericAPIView):
         self._args = args
         for key in kwargs.keys(): setattr(self, key, kwargs[key])
 
-    def response(self, data: any = None, message: any = None, meta_contract: str = 'S1000', headers: dict = {}) -> Response:
-        return APIResponse(data=data, message=message, meta_contract=meta_contract, headers=headers)
+    def response(self, data: any = None, message: any = None, meta_contract: str = 'S1000', pagination: APIPagination = None, headers: dict = {}) -> Response:
+        return APIResponse(data=data, message=message, meta_contract=meta_contract, pagination=pagination, headers=headers)
 
-    def paginate_data(self):
-        pass
+    def paginate_data(self, instance=models.QuerySet) -> APIPagination:
+        return APIPagination(instance=instance, page=self._context.query_params['page'], limit=self._context.query_params['limit'])
 
 class BaseApiUsecase:
     _context: Request
@@ -61,3 +65,23 @@ class BaseApiUsecase:
 
     def __init__(self, context: request = None) -> None:
         self._context = context
+
+
+class _ModelManager_(models.Manager):
+    def get_queryset(self) -> models.Manager:
+        try: queryset = super().get_queryset().filter(deletedAt__isnull=True)
+        except: queryset = super().get_queryset().all()
+        return queryset
+
+class BaseModel(models.Model):
+    objects: models.Manager = _ModelManager_()
+    class Meta:
+        abstract = True
+
+class BaseQueryParameter(serializers.Serializer):
+    query = serializers.CharField(required=False)
+    limit = serializers.IntegerField(required=False, min_value=1, max_value=1000, default=100)
+    page = serializers.IntegerField(required=False, min_value=1, default=1)
+
+    class Meta:
+        abstract = True

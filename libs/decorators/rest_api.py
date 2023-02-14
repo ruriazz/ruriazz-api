@@ -1,5 +1,6 @@
 from rest_framework.decorators import api_view
 from rest_framework.serializers import SerializerMetaclass
+from rest_framework.request import Request
 from libs.extensions import BaseApiHandler
 from libs.response import APIResponse
 
@@ -20,29 +21,39 @@ class DataValidation:
     def __init__(self, validator: SerializerMetaclass) -> None:
         def decorate(f):
             def wrapper(instance, *args, **kwargs):
-                try:
-                    data = validator(data=instance._context.data)
-                    meta_contract = 'E7001'
-                    is_query_params = False
-                except AttributeError:
-                    data = validator(data=instance._context.query_params)
-                    meta_contract = 'E7002'
-                    is_query_params = True
+                validatation = self._get_validator(context=instance._context)
+                err, meta, instance._context = validatation(validator, instance._context)
+                if err:
+                    return APIResponse(message=err, meta_contract=meta)
 
-                if not data.is_valid():
-                    return APIResponse(message=data.errors, meta_contract=meta_contract)
-
-                if is_query_params:
-                    instance._context.query_params._mutable = True
-                    instance._context.query_params.update(data.validated_data)
-                    instance._context.query_params._mutable = False
-                else:
-                    instance._context.data.update(data.validated_data)
-
-                func = f(instance)
+                func = f(instance, *args, **kwargs)
                 return func
             return wrapper
         self.func = decorate
 
     def __call__(self, *args, **kwargs):
         return self.func(*args, **kwargs)
+
+    def _get_validator(self, context: Request):
+        if str(context.method).lower() in ['get', 'delete']:
+            return self._validate_query_params
+
+        return self._validate_data
+
+    def _validate_data(self, validator: SerializerMetaclass, context: Request) -> tuple:
+        _serializer = validator(data=context.data)
+        if not _serializer.is_valid():
+            return _serializer.errors, 'E7002', context
+
+        context.data.update(_serializer.validated_data)
+        return None, None, context
+
+    def _validate_query_params(self, validator: SerializerMetaclass, context: Request) -> tuple:
+        _serializer = validator(data=context.query_params)
+        if not _serializer.is_valid():
+            return _serializer.errors, 'E7001', context
+
+        context.query_params._mutable = True
+        context.query_params.update(_serializer.validated_data)
+        context.query_params._mutable = False
+        return None, None, context

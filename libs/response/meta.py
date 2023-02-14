@@ -3,6 +3,7 @@ from configs.variables import API_META
 
 
 class APIMeta:
+    success: bool
     code: int
     http_code: int
     message: str
@@ -13,7 +14,8 @@ class APIMeta:
             self.code = int(re.sub('[^0-9]', '', contract))
             self.http_code = meta[0]
             self.message = meta[1]
+            self.success = meta[0] >= 100 and meta[0] < 299
 
     def _to_dict(self) -> dict:
-        try: return {'code': self.code, 'httpCode': self.http_code, 'message': self.message}
+        try: return {'success': self.success, 'code': self.code, 'httpCode': self.http_code, 'message': self.message}
         except: return {}

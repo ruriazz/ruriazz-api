@@ -3,4 +3,4 @@ from django.apps import AppConfig
 
 class IdnDistrictConfig(AppConfig):
     default_auto_field = 'django.db.models.BigAutoField'
-    name = 'idn_district'
+    name = 'models.idn_district'
