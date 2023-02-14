@@ -1,0 +1,546 @@
+[
+    {
+        "model": "idn_province.idnprovince",
+        "pk": 1,
+        "fields": {
+            "slug": "nanggroe-aceh-darussalam",
+            "code": "11",
+            "isoCode": "ID-AC",
+            "name": "Nanggroe Aceh Darussalam",
+            "geographicArea": "Sumatra",
+            "capital": "Banda Aceh",
+            "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/41/Coat_of_arms_of_Aceh.svg/1024px-Coat_of_arms_of_Aceh.svg.png",
+            "createdAt": "2023-02-14T06:38:07.045Z",
+            "updatedAt": "2023-02-14T06:38:07.045Z",
+            "deletedAt": null
+        }
+    },
+    {
+        "model": "idn_province.idnprovince",
+        "pk": 2,
+        "fields": {
+            "slug": "bali",
+            "code": "51",
+            "isoCode": "ID-BA",
+            "name": "Bali",
+            "geographicArea": "Nusa Tenggara",
+            "capital": "Denpasar",
+            "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/10/Coat_of_arms_of_Bali.svg/1024px-Coat_of_arms_of_Bali.svg.png",
+            "createdAt": "2023-02-14T06:38:07.194Z",
+            "updatedAt": "2023-02-14T06:38:07.194Z",
+            "deletedAt": null
+        }
+    },
+    {
+        "model": "idn_province.idnprovince",
+        "pk": 3,
+        "fields": {
+            "slug": "banten",
+            "code": "36",
+            "isoCode": "ID-BT",
+            "name": "Banten",
+            "geographicArea": "Jawa",
+            "capital": "Serang",
+            "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/52/Coat_of_arms_of_Banten.svg/1024px-Coat_of_arms_of_Banten.svg.png",
+            "createdAt": "2023-02-14T06:38:07.302Z",
+            "updatedAt": "2023-02-14T06:38:07.302Z",
+            "deletedAt": null
+        }
+    },
+    {
+        "model": "idn_province.idnprovince",
+        "pk": 4,
+        "fields": {
+            "slug": "bengkulu",
+            "code": "17",
+            "isoCode": "ID-BE",
+            "name": "Bengkulu",
+            "geographicArea": "Sumatra",
+            "capital": "Bengkulu",
+            "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/54/Coat_of_arms_of_Bengkulu.svg/1024px-Coat_of_arms_of_Bengkulu.svg.png",
+            "createdAt": "2023-02-14T06:38:07.413Z",
+            "updatedAt": "2023-02-14T06:38:07.413Z",
+            "deletedAt": null
+        }
+    },
+    {
+        "model": "idn_province.idnprovince",
+        "pk": 5,
+        "fields": {
+            "slug": "di-yogyakarta",
+            "code": "34",
+            "isoCode": "ID-YO",
+            "name": "DI Yogyakarta",
+            "geographicArea": "Jawa",
+            "capital": "Yogyakarta",
+            "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b8/Coat_of_arms_of_Yogyakarta.svg/1024px-Coat_of_arms_of_Yogyakarta.svg.png",
+            "createdAt": "2023-02-14T06:38:07.522Z",
+            "updatedAt": "2023-02-14T06:38:07.522Z",
+            "deletedAt": null
+        }
+    },
+    {
+        "model": "idn_province.idnprovince",
+        "pk": 6,
+        "fields": {
+            "slug": "dki-jakarta",
+            "code": "31",
+            "isoCode": "ID-JK",
+            "name": "DKI Jakarta",
+            "geographicArea": "Jawa",
+            "capital": null,
+            "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/eb/Coat_of_arms_of_Jakarta.svg/1024px-Coat_of_arms_of_Jakarta.svg.png",
+            "createdAt": "2023-02-14T06:38:07.633Z",
+            "updatedAt": "2023-02-14T06:38:07.633Z",
+            "deletedAt": null
+        }
+    },
+    {
+        "model": "idn_province.idnprovince",
+        "pk": 7,
+        "fields": {
+            "slug": "gorontalo",
+            "code": "75",
+            "isoCode": "ID-GO",
+            "name": "Gorontalo",
+            "geographicArea": "Sulawesi",
+            "capital": "Gorontalo",
+            "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/01/Coat_of_arms_of_Gorontalo.svg/1024px-Coat_of_arms_of_Gorontalo.svg.png",
+            "createdAt": "2023-02-14T06:38:07.742Z",
+            "updatedAt": "2023-02-14T06:38:07.742Z",
+            "deletedAt": null
+        }
+    },
+    {
+        "model": "idn_province.idnprovince",
+        "pk": 8,
+        "fields": {
+            "slug": "jambi",
+            "code": "15",
+            "isoCode": "ID-JA",
+            "name": "Jambi",
+            "geographicArea": "Sumatra",
+            "capital": "Jambi",
+            "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f2/Coat_of_arms_of_Jambi.svg/1024px-Coat_of_arms_of_Jambi.svg.png",
+            "createdAt": "2023-02-14T06:38:07.853Z",
+            "updatedAt": "2023-02-14T06:38:07.853Z",
+            "deletedAt": null
+        }
+    },
+    {
+        "model": "idn_province.idnprovince",
+        "pk": 9,
+        "fields": {
+            "slug": "jawa-barat",
+            "code": "32",
+            "isoCode": "ID-JB",
+            "name": "Jawa Barat",
+            "geographicArea": "Jawa",
+            "capital": "Bandung",
+            "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Coat_of_arms_of_West_Java.svg/1024px-Coat_of_arms_of_West_Java.svg.png",
+            "createdAt": "2023-02-14T06:38:08.115Z",
+            "updatedAt": "2023-02-14T06:38:08.115Z",
+            "deletedAt": null
+        }
+    },
+    {
+        "model": "idn_province.idnprovince",
+        "pk": 10,
+        "fields": {
+            "slug": "jawa-tengah",
+            "code": "33",
+            "isoCode": "ID-JT",
+            "name": "Jawa Tengah",
+            "geographicArea": "Jawa",
+            "capital": "Semarang",
+            "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bd/Coat_of_arms_of_Central_Java.svg/1024px-Coat_of_arms_of_Central_Java.svg.png",
+            "createdAt": "2023-02-14T06:38:08.303Z",
+            "updatedAt": "2023-02-14T06:38:08.303Z",
+            "deletedAt": null
+        }
+    },
+    {
+        "model": "idn_province.idnprovince",
+        "pk": 11,
+        "fields": {
+            "slug": "jawa-timur",
+            "code": "35",
+            "isoCode": "ID-JI",
+            "name": "Jawa Timur",
+            "geographicArea": "Jawa",
+            "capital": "Surabaya",
+            "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/74/Coat_of_arms_of_East_Java.svg/1024px-Coat_of_arms_of_East_Java.svg.png",
+            "createdAt": "2023-02-14T06:38:08.446Z",
+            "updatedAt": "2023-02-14T06:38:08.446Z",
+            "deletedAt": null
+        }
+    },
+    {
+        "model": "idn_province.idnprovince",
+        "pk": 12,
+        "fields": {
+            "slug": "kalimantan-barat",
+            "code": "61",
+            "isoCode": "ID-KB",
+            "name": "Kalimantan Barat",
+            "geographicArea": "Kalimantan",
+            "capital": "Pontianak",
+            "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5d/Coat_of_arms_of_West_Kalimantan.svg/1024px-Coat_of_arms_of_West_Kalimantan.svg.png",
+            "createdAt": "2023-02-14T06:38:08.603Z",
+            "updatedAt": "2023-02-14T06:38:08.604Z",
+            "deletedAt": null
+        }
+    },
+    {
+        "model": "idn_province.idnprovince",
+        "pk": 13,
+        "fields": {
+            "slug": "kalimantan-selatan",
+            "code": "63",
+            "isoCode": "ID-KS",
+            "name": "Kalimantan Selatan",
+            "geographicArea": "Kalimantan",
+            "capital": "Banjarbaru",
+            "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a6/Coat_of_arms_of_South_Kalimantan.svg/1024px-Coat_of_arms_of_South_Kalimantan.svg.png",
+            "createdAt": "2023-02-14T06:38:08.715Z",
+            "updatedAt": "2023-02-14T06:38:08.715Z",
+            "deletedAt": null
+        }
+    },
+    {
+        "model": "idn_province.idnprovince",
+        "pk": 14,
+        "fields": {
+            "slug": "kalimantan-tengah",
+            "code": "62",
+            "isoCode": "ID-KT",
+            "name": "Kalimantan Tengah",
+            "geographicArea": "Kalimantan",
+            "capital": "Palangka Raya",
+            "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/Coat_of_arms_of_Central_Kalimantan.svg/1024px-Coat_of_arms_of_Central_Kalimantan.svg.png",
+            "createdAt": "2023-02-14T06:38:08.844Z",
+            "updatedAt": "2023-02-14T06:38:08.844Z",
+            "deletedAt": null
+        }
+    },
+    {
+        "model": "idn_province.idnprovince",
+        "pk": 15,
+        "fields": {
+            "slug": "kalimantan-timur",
+            "code": "64",
+            "isoCode": "ID-KI",
+            "name": "Kalimantan Timur",
+            "geographicArea": "Kalimantan",
+            "capital": "Samarinda",
+            "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bc/Coat_of_arms_of_East_Kalimantan.svg/1024px-Coat_of_arms_of_East_Kalimantan.svg.png",
+            "createdAt": "2023-02-14T06:38:08.962Z",
+            "updatedAt": "2023-02-14T06:38:08.962Z",
+            "deletedAt": null
+        }
+    },
+    {
+        "model": "idn_province.idnprovince",
+        "pk": 16,
+        "fields": {
+            "slug": "kalimantan-utara",
+            "code": "65",
+            "isoCode": "ID-KU",
+            "name": "Kalimantan Utara",
+            "geographicArea": "Kalimantan",
+            "capital": "Tanjung Selor",
+            "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/21/Coat_of_arms_of_North_Kalimantan_%282021_version%29.svg/1024px-Coat_of_arms_of_North_Kalimantan_%282021_version%29.svg.png",
+            "createdAt": "2023-02-14T06:38:09.075Z",
+            "updatedAt": "2023-02-14T06:38:09.075Z",
+            "deletedAt": null
+        }
+    },
+    {
+        "model": "idn_province.idnprovince",
+        "pk": 17,
+        "fields": {
+            "slug": "bangka-belitung",
+            "code": "19",
+            "isoCode": "ID-BB",
+            "name": "Bangka Belitung",
+            "geographicArea": "Sumatra",
+            "capital": "Pangkalpinang",
+            "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/Coat_of_arms_of_Bangka_Belitung_Islands.svg/1024px-Coat_of_arms_of_Bangka_Belitung_Islands.svg.png",
+            "createdAt": "2023-02-14T06:38:09.183Z",
+            "updatedAt": "2023-02-14T06:38:09.183Z",
+            "deletedAt": null
+        }
+    },
+    {
+        "model": "idn_province.idnprovince",
+        "pk": 18,
+        "fields": {
+            "slug": "kepulauan-riau",
+            "code": "21",
+            "isoCode": "ID-KR",
+            "name": "Kepulauan Riau",
+            "geographicArea": "Sumatra",
+            "capital": "Tanjungpinang",
+            "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/54/Coat_of_arms_of_Riau_Islands.svg/1024px-Coat_of_arms_of_Riau_Islands.svg.png",
+            "createdAt": "2023-02-14T06:38:09.300Z",
+            "updatedAt": "2023-02-14T06:38:09.300Z",
+            "deletedAt": null
+        }
+    },
+    {
+        "model": "idn_province.idnprovince",
+        "pk": 19,
+        "fields": {
+            "slug": "lampung",
+            "code": "18",
+            "isoCode": "ID-LA",
+            "name": "Lampung",
+            "geographicArea": "Sumatra",
+            "capital": "Bandar Lampung",
+            "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f0/Coat_of_arms_of_Lampung.svg/1024px-Coat_of_arms_of_Lampung.svg.png",
+            "createdAt": "2023-02-14T06:38:09.409Z",
+            "updatedAt": "2023-02-14T06:38:09.409Z",
+            "deletedAt": null
+        }
+    },
+    {
+        "model": "idn_province.idnprovince",
+        "pk": 20,
+        "fields": {
+            "slug": "maluku",
+            "code": "81",
+            "isoCode": "ID-MA",
+            "name": "Maluku",
+            "geographicArea": "Maluku",
+            "capital": "Ambon",
+            "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/39/Coat_of_arms_of_Maluku.svg/1024px-Coat_of_arms_of_Maluku.svg.png",
+            "createdAt": "2023-02-14T06:38:09.516Z",
+            "updatedAt": "2023-02-14T06:38:09.517Z",
+            "deletedAt": null
+        }
+    },
+    {
+        "model": "idn_province.idnprovince",
+        "pk": 21,
+        "fields": {
+            "slug": "maluku-utara",
+            "code": "82",
+            "isoCode": "ID-MU",
+            "name": "Maluku Utara",
+            "geographicArea": "Maluku",
+            "capital": "Sofifi",
+            "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/73/Coat_of_arms_of_North_Maluku.svg/1024px-Coat_of_arms_of_North_Maluku.svg.png",
+            "createdAt": "2023-02-14T06:38:09.624Z",
+            "updatedAt": "2023-02-14T06:38:09.624Z",
+            "deletedAt": null
+        }
+    },
+    {
+        "model": "idn_province.idnprovince",
+        "pk": 22,
+        "fields": {
+            "slug": "nusa-tenggara-barat",
+            "code": "52",
+            "isoCode": "ID-NB",
+            "name": "Nusa Tenggara Barat",
+            "geographicArea": "Nusa Tenggara",
+            "capital": "Mataram",
+            "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/Coat_of_arms_of_West_Nusa_Tenggara.svg/1024px-Coat_of_arms_of_West_Nusa_Tenggara.svg.png",
+            "createdAt": "2023-02-14T06:38:09.727Z",
+            "updatedAt": "2023-02-14T06:38:09.727Z",
+            "deletedAt": null
+        }
+    },
+    {
+        "model": "idn_province.idnprovince",
+        "pk": 23,
+        "fields": {
+            "slug": "nusa-tenggara-timur",
+            "code": "53",
+            "isoCode": "ID-NT",
+            "name": "Nusa Tenggara Timur",
+            "geographicArea": "Nusa Tenggara",
+            "capital": "Kupang",
+            "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e9/Coat_of_Arms_of_East_Nusa_Tenggara_NEW.png/1024px-Coat_of_Arms_of_East_Nusa_Tenggara_NEW.png",
+            "createdAt": "2023-02-14T06:38:09.841Z",
+            "updatedAt": "2023-02-14T06:38:09.841Z",
+            "deletedAt": null
+        }
+    },
+    {
+        "model": "idn_province.idnprovince",
+        "pk": 24,
+        "fields": {
+            "slug": "papua",
+            "code": "91",
+            "isoCode": "ID-PA",
+            "name": "Papua",
+            "geographicArea": "Papua",
+            "capital": "Jayapura",
+            "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/Coat_of_arms_of_Papua_2.svg/1024px-Coat_of_arms_of_Papua_2.svg.png",
+            "createdAt": "2023-02-14T06:38:09.967Z",
+            "updatedAt": "2023-02-14T06:38:09.967Z",
+            "deletedAt": null
+        }
+    },
+    {
+        "model": "idn_province.idnprovince",
+        "pk": 25,
+        "fields": {
+            "slug": "papua-barat",
+            "code": "92",
+            "isoCode": "ID-PB",
+            "name": "Papua Barat",
+            "geographicArea": "Papua",
+            "capital": "Manokwari",
+            "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/de/Coat_of_arms_of_West_Papua.svg/1024px-Coat_of_arms_of_West_Papua.svg.png",
+            "createdAt": "2023-02-14T06:38:10.093Z",
+            "updatedAt": "2023-02-14T06:38:10.093Z",
+            "deletedAt": null
+        }
+    },
+    {
+        "model": "idn_province.idnprovince",
+        "pk": 26,
+        "fields": {
+            "slug": "riau",
+            "code": "14",
+            "isoCode": "ID-RI",
+            "name": "Riau",
+            "geographicArea": "Sumatra",
+            "capital": "Pekanbaru",
+            "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0b/Coat_of_arms_of_Riau.svg/1024px-Coat_of_arms_of_Riau.svg.png",
+            "createdAt": "2023-02-14T06:38:10.226Z",
+            "updatedAt": "2023-02-14T06:38:10.226Z",
+            "deletedAt": null
+        }
+    },
+    {
+        "model": "idn_province.idnprovince",
+        "pk": 27,
+        "fields": {
+            "slug": "sulawesi-barat",
+            "code": "76",
+            "isoCode": "ID-SR",
+            "name": "Sulawesi Barat",
+            "geographicArea": "Sulawesi",
+            "capital": "Mamuju",
+            "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/89/Coat_of_arms_of_West_Sulawesi.svg/1024px-Coat_of_arms_of_West_Sulawesi.svg.png",
+            "createdAt": "2023-02-14T06:38:10.361Z",
+            "updatedAt": "2023-02-14T06:38:10.362Z",
+            "deletedAt": null
+        }
+    },
+    {
+        "model": "idn_province.idnprovince",
+        "pk": 28,
+        "fields": {
+            "slug": "sulawesi-selatan",
+            "code": "73",
+            "isoCode": "ID-SN",
+            "name": "Sulawesi Selatan",
+            "geographicArea": "Sulawesi",
+            "capital": "Makassar",
+            "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/67/Coat_of_arms_of_South_Sulawesi.svg/1024px-Coat_of_arms_of_South_Sulawesi.svg.png",
+            "createdAt": "2023-02-14T06:38:10.481Z",
+            "updatedAt": "2023-02-14T06:38:10.481Z",
+            "deletedAt": null
+        }
+    },
+    {
+        "model": "idn_province.idnprovince",
+        "pk": 29,
+        "fields": {
+            "slug": "sulawesi-tengah",
+            "code": "72",
+            "isoCode": "ID-ST",
+            "name": "Sulawesi Tengah",
+            "geographicArea": "Sulawesi",
+            "capital": "Palu",
+            "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/46/Coat_of_arms_of_Central_Sulawesi.svg/1024px-Coat_of_arms_of_Central_Sulawesi.svg.png",
+            "createdAt": "2023-02-14T06:38:10.606Z",
+            "updatedAt": "2023-02-14T06:38:10.606Z",
+            "deletedAt": null
+        }
+    },
+    {
+        "model": "idn_province.idnprovince",
+        "pk": 30,
+        "fields": {
+            "slug": "sulawesi-tenggara",
+            "code": "74",
+            "isoCode": "ID-SG",
+            "name": "Sulawesi Tenggara",
+            "geographicArea": "Sulawesi",
+            "capital": "Kendari",
+            "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/31/Coat_of_arms_of_Southeast_Sulawesi.svg/1024px-Coat_of_arms_of_Southeast_Sulawesi.svg.png",
+            "createdAt": "2023-02-14T06:38:10.732Z",
+            "updatedAt": "2023-02-14T06:38:10.732Z",
+            "deletedAt": null
+        }
+    },
+    {
+        "model": "idn_province.idnprovince",
+        "pk": 31,
+        "fields": {
+            "slug": "sulawesi-utara",
+            "code": "71",
+            "isoCode": "ID-SA",
+            "name": "Sulawesi Utara",
+            "geographicArea": "Sulawesi",
+            "capital": "Manado",
+            "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/68/Coat_of_arms_of_North_Sulawesi.svg/1024px-Coat_of_arms_of_North_Sulawesi.svg.png",
+            "createdAt": "2023-02-14T06:38:10.852Z",
+            "updatedAt": "2023-02-14T06:38:10.852Z",
+            "deletedAt": null
+        }
+    },
+    {
+        "model": "idn_province.idnprovince",
+        "pk": 32,
+        "fields": {
+            "slug": "sumatera-barat",
+            "code": "13",
+            "isoCode": "ID-SB",
+            "name": "Sumatera Barat",
+            "geographicArea": "Sumatra",
+            "capital": "Padang",
+            "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/62/Coat_of_arms_of_West_Sumatra.svg/1024px-Coat_of_arms_of_West_Sumatra.svg.png",
+            "createdAt": "2023-02-14T06:38:10.973Z",
+            "updatedAt": "2023-02-14T06:38:10.973Z",
+            "deletedAt": null
+        }
+    },
+    {
+        "model": "idn_province.idnprovince",
+        "pk": 33,
+        "fields": {
+            "slug": "sumatera-selatan",
+            "code": "16",
+            "isoCode": "ID-SS",
+            "name": "Sumatera Selatan",
+            "geographicArea": "Sumatra",
+            "capital": "Palembang",
+            "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/45/Coat_of_arms_of_South_Sumatra.svg/1024px-Coat_of_arms_of_South_Sumatra.svg.png",
+            "createdAt": "2023-02-14T06:38:11.081Z",
+            "updatedAt": "2023-02-14T06:38:11.081Z",
+            "deletedAt": null
+        }
+    },
+    {
+        "model": "idn_province.idnprovince",
+        "pk": 34,
+        "fields": {
+            "slug": "sumatera-utara",
+            "code": "12",
+            "isoCode": "ID-SU",
+            "name": "Sumatera Utara",
+            "geographicArea": "Sumatra",
+            "capital": "Medan",
+            "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c8/Coat_of_arms_of_North_Sumatra.svg/1024px-Coat_of_arms_of_North_Sumatra.svg.png",
+            "createdAt": "2023-02-14T06:38:11.248Z",
+            "updatedAt": "2023-02-14T06:38:11.248Z",
+            "deletedAt": null
+        }
+    }
+]
