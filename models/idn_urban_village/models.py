@@ -7,7 +7,7 @@ from models.idn_province.models import IdnProvince
 class IdnUrbanVillage(BaseModel):
     id = models.AutoField(primary_key=True)
     idnSubdistrict = models.ForeignKey(to=IdnSubdistrict, on_delete=models.CASCADE, db_column='idnSubdistrictId', related_name='urbanVillages')
-    IdnDistrict = models.ForeignKey(to=IdnDistrict, on_delete=models.CASCADE, db_column='idnDistrictId', related_name='urbanVillages')
+    idnDistrict = models.ForeignKey(to=IdnDistrict, on_delete=models.CASCADE, db_column='idnDistrictId', related_name='urbanVillages')
     idnProvince = models.ForeignKey(to=IdnProvince, on_delete=models.CASCADE, db_column='idnProvinceId', related_name='urbanVillages')
     slug = models.SlugField(max_length=75, unique=True)
     code = models.CharField(max_length=20, unique=True)
