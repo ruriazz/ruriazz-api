@@ -1,0 +1,17 @@
+annotated-types==0.5.0
+asgiref==3.7.2
+certifi==2023.7.22
+charset-normalizer==3.2.0
+Django==4.1.11
+django-cors-headers==4.2.0
+djangorestframework==3.14.0
+dnspython==2.4.2
+email-validator==2.0.0.post2
+idna==3.4
+pydantic==2.3.0
+pydantic_core==2.6.3
+pytz==2023.3.post1
+requests==2.31.0
+sqlparse==0.2.4
+typing_extensions==4.8.0
+urllib3==2.0.5
