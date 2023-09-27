@@ -143,7 +143,11 @@ EMAIL_HOST = os.getenv('SMTP_HOST')
 EMAIL_PORT = int(os.getenv('SMTP_PORT') or '587')
 EMAIL_USE_TLS = (os.getenv('SMTP_TLS') or 'false').lower() == 'true'
 EMAIL_USE_SSL = (os.getenv('SMTP_SSL') or 'false').lower() == 'true'
-EMAIL_HOST_USER = os.getenv('SMT_USER')
+EMAIL_HOST_USER = os.getenv('SMTP_USER')
 EMAIL_HOST_PASSWORD = os.getenv('SMTP_PASSWORD')
 EMAIL_AUTH_METHOD = 'LOGIN'
 EMAIL_CONTACT_RECIPIENTS = [i.strip() for i in (os.getenv('EMAIL_CONTACT_RECIPIENTS') or '').split(',')]
+
+# hcaptcha Options
+HCAPTCHA_SECRET = os.getenv('HCAPTCHA_SECRET')
+HCAPTCHA_ALLOWED_HOSTS = [i.strip() for i in (os.getenv('HCAPTCHA_ALLOWED_HOSTS') or '').split(',')]
