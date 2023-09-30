@@ -5,3 +5,8 @@ Thank you!
 
 [Aziz Ruri Suparman]
 """
+
+WWW_GUEST_SUBSCRIBE_GREETING = """Thank you for your subscribe. We will continue to send the latest information regarding warkopwarawiri.biz.id
+
+regards
+[@warkopwarawiri]"""

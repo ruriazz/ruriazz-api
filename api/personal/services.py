@@ -20,5 +20,5 @@ class PersonalContact(BaseService):
         if _ := PlainTextEmail(recipients=settings.EMAIL_CONTACT_RECIPIENTS, subject=f"{self._data.sender_name} menghubungi melalui contact page", body=message).send():
             return self.with_error(Exception("failed to send message"))
 
-        if _ := PlainTextEmail(recipients=[self._data.sender_email], subject='Pesan telah diterima', body=const.CONTACT_GREETING).send():
+        if _ := PlainTextEmail(recipients=[self._data.sender_email], subject='Message sent!', body=const.CONTACT_GREETING).send():
             return self.with_error(Exception(f"failed send greeting to '{self._data.sender_email}'"))

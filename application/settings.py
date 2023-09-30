@@ -37,7 +37,9 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'corsheaders'
+    'corsheaders',
+
+    'models.www_guest_subscribe.apps.WWWGuestSubscribeConfig'
 ]
 
 MIDDLEWARE = [
@@ -75,11 +77,22 @@ WSGI_APPLICATION = 'application.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 
+DATABASE_USED = os.getenv('DATABASE_USED')
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
-    }
+        'sqlite': {
+            'ENGINE': 'django.db.backends.sqlite3',
+            'NAME': BASE_DIR / 'db.sqlite3',
+        },
+        'postgresql': {
+            'ENGINE': 'django.db.backends.postgresql',
+            'NAME': os.getenv('PG_DATABASE_NAME'),
+            'USER': os.getenv('PG_DATABASE_USER'),
+            'PASSWORD': os.getenv('PG_DATABASE_PASSWORD'),
+            'HOST': os.getenv('PG_DATABASE_HOST'),
+            'PORT': os.getenv('PG_DATABASE_PORT') or '5432',
+        }
+    }.get(DATABASE_USED or 'sqlite')
 }
 
 
